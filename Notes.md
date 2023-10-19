@@ -167,3 +167,24 @@ export default App;
 ```
 
 - `message` was passed `App` -> `Main` -> `Header` -> `Wrapper` -> `Button`
+
+# Week3 Navigation, updating and assets in React.js
+
+## Linking and Routing
+
+- Install React Router Dom `npm i react-router-dom`
+- In `index.js`, `import {BrowserRouter} from "react-router-dom"`, wrap `<App/>` inside `<BrowserRouter>` tags
+- In `App.js`:
+
+1. `import { Routes, Route, Link } from "react-router-dom";`
+2. Instead of importing components directly, Use `Routers` and `Route` structure, the components in `element` should be self-closing.
+
+```
+<Routes>
+  <Route path="/" element={<Homepage />}></Route>
+  <Route path="/about" element={<AboutLittleLemon />}></Route>
+  <Route path="/contact" element={<Contact />}></Route>
+</Routes>
+```
+
+3. If navbar is needed, instead of `<a>`, use `<Link>`, e.g. `<Link to="/about" className="nav-item">About Little Lemon</Link>`
