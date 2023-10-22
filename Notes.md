@@ -188,3 +188,20 @@ export default App;
 ```
 
 3. If navbar is needed, instead of `<a>`, use `<Link>`, e.g. `<Link to="/about" className="nav-item">About Little Lemon</Link>`
+
+## Using assets in React
+
+- Ways to insert images:
+
+1. Import `import park from "./assets/images/central-park.jpg";` and then use an img tag `<img height={200} src={park} alt="A picture of central park" />`
+2. Use `require` without importing `      <img height={200} src={require("./assets/images/central-park.jpg")} />`
+3. Import an online image, pass the image url `const randomImageUrl = "https://picsum.photos/400/265";` and `<img height={200} src={randomImageUrl} />`
+
+## Media packages
+
+- e.g. react-player
+
+1. `npm install react-player`
+2. Import the entire package`import ReactPlayer from "react-player";` or the package for a specific site `import ReactPlayer from "react-player/youtube";`
+3. Build components with it `<ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />`
+4. Some attributes: `playing={false}`--do not play automatically; `volume={0.5}`--set volume to 50%
